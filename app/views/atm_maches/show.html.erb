@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @atm_mach.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @atm_mach.address %>
+</p>
+
+
+
+<hr>
+
+   <%=image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@atm_mach.latitude}%2C#{@atm_mach.longitude}"%>
+
+<center><h3>Nearby locations</h3>
+<ul>
+<% for atm_mach in @atm_mach.nearbys(10) %>
+  <li><%= link_to atm_mach.address, atm_mach %> (<%= atm_mach.distance.round(2) %> miles)</li>
+<% end %>
+</ul></center>
+
+
+<%= link_to 'Edit', edit_atm_mach_path(@atm_mach) %> |
+<%= link_to 'Back', atm_maches_path %>
