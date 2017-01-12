@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_infos
   resources :atm_maches
   devise_for :users
   root 'atm_maches#index'

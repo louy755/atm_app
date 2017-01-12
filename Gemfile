@@ -10,6 +10,9 @@ gem 'geocoder'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'devise-bootstrapped', '~> 0.1.1'
 
+gem 'carrierwave', '~> 1.0'
+gem 'imagemagick-identify', '~> 0.0.1'
+gem 'rmagick', '~> 2.16'
 
 
 
